@@ -1,0 +1,83 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 80%;
+    margin: 100px auto;
+}
+
+:root {
+    --card-width: 32.33%;
+}
+
+.carousel-wrapper {
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-wrapper .carousel-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-container .carousel {
+    display: flex;
+    gap: 1%;
+    transition: transform 200ms;
+}
+
+.carousel .carousel-card {
+    flex: 0 0 var(--card-width);
+    border: 2px solid #1f69c5;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+
+.carousel-container > .fa-solid {
+    position: absolute;
+    bottom: 0;
+    left: var(--left);
+    right: var(--right);
+    font-size: 1.5rem;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #2834d9;
+    background: #00000029;
+}
+
+.carousel-container .dots {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.dots label {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #a19f9f;
+    cursor: pointer;
+}
+
+.dots label.active {
+    background: #072ce7;
+}
+
+
+@media (width <= 900px) {
+    :root {
+        --card-width: 49%;
+    }
+}
+@media (width <= 550px) {
+    :root {
+        --card-width: 99%;
+    }
+}
